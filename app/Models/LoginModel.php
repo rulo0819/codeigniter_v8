@@ -6,9 +6,9 @@ use CodeIgniter\Model;
 
 class LoginModel extends Model
 {
-    protected $table = 'users';
-    protected $primaryKey = 'id';
-    protected $allowedFields = ['name', 'email', 'password', 'created_at', 'updated_at'];
+    protected $table = 'usuarios';
+    protected $primaryKey = 'id_usuario';
+    protected $allowedFields = ['nombre', 'correo_usuario', 'password_usuario', 'created_at', 'updated_at'];
     protected $useTimestamps = true;
     protected $createdField = 'created_at';
     protected $updatedField = 'updated_at';

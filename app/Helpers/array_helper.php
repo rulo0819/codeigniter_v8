@@ -74,7 +74,7 @@ if (!function_exists('breadcrumb_panel')) {
      * Genera el HTML del breadcrumb para el panel
      *
      * @param string $titulo_pagina  Título que aparece en el h1
-     * @param array  $breadcrum      Arreglo de items del breadcrumb
+     * @param array  $breadcrumb      Arreglo de items del breadcrumb
      * @return string
      */
     function breadcrumb_panel(string $titulo_pagina, array $breadcrum = []): string
@@ -87,7 +87,7 @@ if (!function_exists('breadcrumb_panel')) {
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
                     <li class="breadcrumb-item">
-                        <a href="' . route_to('/Dashboard') . '">
+                        <a href="' . route_to('admin.dashboard') . '">
                             <i class="fa fa-home" aria-hidden="true"></i>
                         </a>
                     </li>';

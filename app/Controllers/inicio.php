@@ -5,10 +5,9 @@ namespace App\Controllers;
 use App\Controllers\BaseController;
 use CodeIgniter\HTTP\ResponseInterface;
 
-class inicio extends BaseController
+class Inicio extends BaseController
 {
     public function index(): string {
-    echo "inicio in controller";
         return view('usuario/inicio');
     }
 }

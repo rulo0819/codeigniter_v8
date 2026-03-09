@@ -11,7 +11,7 @@
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="<?= base_url(DIR_RECURSOS_FONTS . '/font-awesome-4.7.0/css/font-awesome.min.css') ?>">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="<?= base_url(DIR_RECURSOS_VENDOR . '/animate/animate.css') ?>">DIR_RECURSOS_CSS
+	<link rel="stylesheet" type="text/css" href="<?= base_url(DIR_RECURSOS_VENDOR . '/animate/animate.css') ?>">
 <!--===============================================================================================-->	
 	<link rel="stylesheet" type="text/css" href="<?= base_url(DIR_RECURSOS_VENDOR . '/css-hamburgers/hamburgers.min.css') ?>">
 <!--===============================================================================================-->
@@ -30,7 +30,7 @@
 					<img src="<?= base_url(DIR_RECURSOS_IMAGES . '/img-01.png') ?>" alt="IMG">
 				</div>
 
-				<form class="login100-form validate-form">
+				<form class="login100-form validate-form" method="post" action="<?= site_url('login') ?>">
 					<span class="login100-form-title">
 						Member Login
 					</span>
@@ -44,7 +44,7 @@
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate = "Password is required">
-						<input class="input100" type="password" name="pass" placeholder="Password">
+						<input class="input100" type="password" name="password" placeholder="Password">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-lock" aria-hidden="true"></i>

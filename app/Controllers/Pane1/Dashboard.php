@@ -10,7 +10,7 @@ class Dashboard extends BaseController
 
     public function __construct()
     {
-        helper('array'); // carga app/Helpers/array_helper.php
+        helper(['array', 'panel']); 
     }
 
     private function cargardatos(): array
@@ -18,12 +18,12 @@ class Dashboard extends BaseController
         $datos = [];
 
         $datos['nombre_pagina'] = 'Dashboard';
-        $datos['titulo']        = 'Dashboard AdminLTE 3';
+        $datos['titulo']        = 'Dashboard AdminLTE 33';
 
         // breadcrumb
         $breadcrum = [
             [
-                'href'   => route_to('dashboard'),
+                'href'   => route_to('admin.dashboard'),
                 'titulo' => 'Dashboard lt3',
             ],
             [
@@ -33,7 +33,8 @@ class Dashboard extends BaseController
         ];
 
         $datos['breadcrumb_panel'] = breadcrumb_panel($datos['titulo'], $breadcrum);
-
+        $menu ['menu_lateral'] = crear_menu_lateral();
+        $datos['menu_lateral'] = $menu['menu_lateral'];
         return $datos;
     }
 
