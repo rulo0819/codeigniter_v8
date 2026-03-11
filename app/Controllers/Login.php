@@ -30,6 +30,7 @@ class Login extends BaseController
             ]);
             return redirect()->to('/lt3/dashboard');
         } else {
+            session()->remove(['id_usuario', 'nombre', 'correo_usuario', 'logged_in']);
             return redirect()->back()->with('error', 'Usuario o contraseña incorrectos');
         }
     }
