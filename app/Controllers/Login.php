@@ -14,20 +14,25 @@ class Login extends BaseController
     {
         $model = new LoginModel(); 
 
-        $usuarioPost = $this->request->getPost('nombre');
-        $password = $this->request->getPost('password_usuario');
+        $email = (string) $this->request->getPost('email');
+        $password = (string) $this->request->getPost('password');
 
-        $user = $model->where('nombre', $usuarioPost)->first();
+        $user = $model->where('correo_usuario', $email)->first();
 
-        if ($user && $password === $user->password_usuario) {
+        $passwordHash = hash('sha256', $password);
+
+        if ($user && $passwordHash === $user['password_usuario']) {
             session()->set([
-                'id'   => $user->id_usuario,
-                'nombre'  => $user->nombre_usuario,
+                'id_usuario' => $user['id_usuario'],
+                'nombre'  => $user['nombre'],
+                'correo_usuario' => $user['correo_usuario'],
                 'logged_in' => true
             ]);
-            return redirect()->to('lt3/dashboard');
+            return redirect()->to('/lt3/dashboard');
         } else {
             return redirect()->back()->with('error', 'Usuario o contraseña incorrectos');
         }
     }
 }
+
+//postman 
