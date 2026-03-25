@@ -22,13 +22,13 @@ if (!function_exists('configurar_menu')) {
             'submenu' => [
                 'opcion_b1' => [
                     'is_active' => false,
-                    'href' => route_to('breadcrumb_panel'),
+                    'href' => route_to('admin.dashboard'),
                     'text' => 'Opcion 1',
                     'icon' => '',
                 ],
                 'opcion_b2' => [
                     'is_active' => false,
-                    'href' => route_to('breadcrumb_panel'),
+                    'href' => route_to('admin.dashboard'),
                     'text' => 'Opcion 2',
                     'icon' => ''
                 ]

@@ -26,7 +26,7 @@ abstract class BaseController extends Controller
      */
 
     // protected $session;
-    protected $helpers= ['funciones_globales','panel_helper'];
+    protected $helpers = ['array', 'panel', 'form', 'url'];
 
     /**
      * @return void

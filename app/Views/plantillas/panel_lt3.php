@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-<!--
-This is a starter template page. Use this page to start your new project from
-scratch. This page gets rid of all links and provides the needed markup only.
--->
+
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -179,7 +176,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <img src="<?= base_url(RECURSOS_ADMIN_IMAGES . '/user2-160x160.jpg') ?>" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Alexander Pierce</a>
+          <a href="#" class="d-block"><?= esc(session('full_name') ?? session('nombre') ?? 'Usuario') ?></a>
         </div>
       </div>
 

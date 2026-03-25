@@ -10,7 +10,7 @@ class LoginFilter implements FilterInterface
 {
     public function before(RequestInterface $request, $arguments = null)
     {
-        if (! session()->get('logged_in')) {
+        if (! session()->get('is_logged')) {
             return redirect()->to('/login')->with('error', 'Please login first');
         }
     }
