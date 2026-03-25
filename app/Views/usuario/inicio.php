@@ -31,7 +31,7 @@
 				</div>
 
 
-					<?= form_open('login', ['class' => 'login100-form validate-form']) ?>
+					<?= form_open(route_to('validar-sesion')) ?>
 					<?= csrf_field() ?>
 					<span class="login100-form-title">
 						Member Login
